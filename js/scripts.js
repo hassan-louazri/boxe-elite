@@ -1,7 +1,18 @@
-/*!
-* Start Bootstrap - Landing Page v6.0.6 (https://startbootstrap.com/theme/landing-page)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+function switchLanguage(language) {
+    // Set the lang attribute on the html tag
+    document.documentElement.lang = language;
+
+    // Get all elements with a lang attribute
+    const elements = document.querySelectorAll('[lang]');
+
+    elements.forEach(element => {
+        // Show elements that match the selected language, hide others
+        if (element.getAttribute('lang') === language) {
+            element.classList.remove('hidden');
+        } else {
+            element.classList.add('hidden');
+        }
+    });
+
+    console.log("switchted to: ", document.documentElement.lang);
+}
