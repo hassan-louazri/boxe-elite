@@ -309,7 +309,7 @@
         <h2 lang="fr" class="text-center">Contacter nous maintenant</h2>
         <br />
         <h2 lang="en" class="text-center hidden">Send us a message</h2>
-        <form action="send_email.php" method="post">
+        <form action="#" method="post">
           <div class="form-row">
             <div class="form-group col-md-6">
               <label lang="fr" for="inputName">Nom et prénom</label>
@@ -318,14 +318,14 @@
                 lang="fr"
                 type="text"
                 class="form-control"
-                id="inputName"
+                id="inputName_fr"
                 placeholder="Votre nom et prénom"
               />
               <input
                 lang="en"
                 type="text"
                 class="form-control hidden"
-                id="inputName"
+                id="inputName_en"
                 placeholder="Your full name"
               />
             </div>
@@ -336,14 +336,14 @@
                 lang="fr"
                 type="email"
                 class="form-control"
-                id="inputEmail"
+                id="inputEmail_fr"
                 placeholder="Votre adresse électronique"
               />
               <input
                 lang="en"
                 type="email"
                 class="form-control hidden"
-                id="inputEmail"
+                id="inputEmail_en"
                 placeholder="Your email address"
               />
             </div>
@@ -354,13 +354,13 @@
             <textarea
               lang="fr"
               class="form-control"
-              id="inputQuestion"
+              id="inputQuestion_fr"
               placeholder="Quelle est votre question la plus importante?"
             ></textarea>
             <textarea
               lang="en"
               class="form-control hidden"
-              id="inputQuestion"
+              id="inputQuestion_en"
               placeholder="What is your most important question?"
             ></textarea>
           </div>
@@ -370,22 +370,26 @@
             <textarea
               lang="fr"
               class="form-control"
-              id="inputMessage"
+              id="inputMessage_fr"
               rows="6"
               placeholder="Votre Message"
             ></textarea>
             <textarea
               lang="en"
               class="form-control hidden"
-              id="inputMessage"
+              id="inputMessage_en"
               rows="6"
               placeholder="Your message"
             ></textarea>
           </div>
-          <button lang="fr" type="submit" class="btn btn-custom">
+          <div class="form-group">
+            <div id="response" class="d-none">
+            </div>
+          </div>
+          <button lang="fr" type="button" class="btn btn-custom btn_submit">
             Soumettre
           </button>
-          <button lang="en" type="submit" class="btn btn-custom hidden">
+          <button lang="en" type="button" class="btn btn-custom hidden btn_submit">
             Submit
           </button>
         </form>
