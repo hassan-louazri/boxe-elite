@@ -38,7 +38,7 @@ function doRequest(e){
         var content = document.getElementById('inputMessage_en').value;
     }
     if (name == "" || email== "" || subject== "" || content== ""){
-        return sendResponse("bad_response", "The input(s) are empty !! / Les formes sont vide !!" )
+        return sendResponse("bad_response", "Veuillez remplir tous les champs du formulaire." );
     }
     const xhr = new XMLHttpRequest();
           xhr.open("POST", window.location.href.split('#')[0] + "send_email.php");
@@ -59,9 +59,9 @@ function doRequest(e){
                 sendResponse('bad_response', `Inputs : ${resp.errors[0]}`);
               }else{
                 if (resp.email_sent) {
-                    sendResponse('good_response', "Email has been sent")
+                    sendResponse('good_response', "Votre message a été bien reçu.");
                 }else{
-                    sendResponse('bad_response', "Someting went wrong")
+                    sendResponse('bad_response', "Quelque chose ne marche pas.");
                 }
               }
             //   sendResponse();
